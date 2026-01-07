@@ -1,9 +1,9 @@
 from fastapi import APIRouter
 
-router = APIRouter()
+router = APIRouter(prefix="/api")
 
 @router.get("/health")
-def health_check():
+def health():
     return {
         "status": "OK",
         "message": "Backend is running perfectly 🚀"
